@@ -1,1 +1,1 @@
-Estudando Node.js e desenvolvendo conhecimentos sobre o assunto.
+Estudando Node.js e desenvolvendo conhecimentos sobre o assunto com o curso do balta.io disponível no Youtube.

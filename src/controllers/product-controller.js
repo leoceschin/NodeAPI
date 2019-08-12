@@ -5,7 +5,22 @@ const Product = mongoose.model('Product');
 
 exports.get = (req, res, next) => {
     Product
-        .find({active: true}, 'title price slug')
+        .find({
+            active: true
+        }, 'title price slug')
+        .then(data => {
+            res.status(200).send(data);
+        }).catch(e => {
+            res.status(400).send(e);
+        });
+};
+
+exports.getBySlug = (req, res, next) => {
+    Product
+        .find({
+            slug: req.params.slug,
+            active: true
+        }, 'title slug description price tags')
         .then(data => {
             res.status(200).send(data);
         }).catch(e => {
